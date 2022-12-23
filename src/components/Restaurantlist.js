@@ -26,7 +26,7 @@ const Restaurantlist = () => {
     <Image  className='fluid image' style={{width:"100vw",height:"70vh",objectFit:"cover"}} />
     </div>
     <div className='textContainer'>
-      <p className='heading text-pop-up-top '>FIND THE BEST RESTAURANTS!</p>
+      <p className='heading'>FIND THE BEST RESTAURANTS!</p>
     </div>
     </div>
     <>

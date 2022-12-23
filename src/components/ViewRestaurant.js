@@ -35,8 +35,8 @@ const ViewRestaurant = () => {
     {
         viewrest?
         (
-        <Row>
-      <Col>
+        <Row className='rows'>
+      <Col style={{display:"flex",alignItems:"center",justifyContent:"center"}}>
       <Image src={viewrest.photograph} fluid style={{width:'100%',height:'70vh',objectFit:'cover',margin:"20px 30px"}}/>
       </Col>
       <Col style={{width:"100%",margin:"10px 20px"}}>
