@@ -9,7 +9,6 @@ import '../Styels/viewrestaurant.css'
 
 const ViewRestaurant = () => {
     const param=useParams()
-    console.log(param.id);
         //to hold value
         const [allrestaurants,setRestaurants]=useState([])
         //function to call  API to get all restuarant item from json
@@ -28,7 +27,6 @@ const ViewRestaurant = () => {
         },[])
 
         const viewrest=allrestaurants.find(item=>item.id==param.id)
-        console.log(viewrest);
 
   return (
     <>
@@ -43,10 +41,10 @@ const ViewRestaurant = () => {
       <div className='scroll-bg'>
         <div className='scroll-div'>
          <div className='scroll-object'>
-         <h5 style={{fontWeight:"500"}}>{viewrest.name}</h5>
-         <h5 style={{fontWeight:"500"}}>{viewrest.neighborhood}</h5>
-      <h5 style={{fontWeight:"500"}}>{viewrest.address}</h5>
-      <h5 style={{fontWeight:"500"}}>{viewrest.cuisine_type}</h5>
+         <h4 style={{fontWeight:"500"}}>{viewrest.name}</h4>
+         <h6 style={{fontWeight:"500"}}>{viewrest.neighborhood}</h6>
+      <h6 style={{fontWeight:"500"}}>{viewrest.address}</h6>
+      <h6 style={{fontWeight:"500"}}>{viewrest.cuisine_type}</h6>
         <RestOperation operate={viewrest.operating_hours}/>
         <Reviews review={viewrest.reviews}/>
          </div>

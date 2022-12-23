@@ -24,7 +24,7 @@ const Header = () => {
             <Form.Control
               type="search"
               placeholder="Search"
-              className="me-2"
+              className=""
               aria-label="Search"
               style={{backgroundColor:"rgba(12, 11, 11, 0.418)",caretColor:"white",color:"white"}}
             />

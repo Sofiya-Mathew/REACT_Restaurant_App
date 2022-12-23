@@ -13,7 +13,6 @@ const Restaurantlist = () => {
     const [allrestaurants,setRestaurants]=useState([])
     const dispatch=useDispatch()
     const result=useSelector(state=>state.restaurantReducer)
-    console.log(result);
     const {restaurantList}=result
     useEffect(()=>{
       dispatch(RestaurantListAction())

@@ -1,9 +1,11 @@
 import React, { useState } from 'react';
 import Button from 'react-bootstrap/Button';
 import Collapse from 'react-bootstrap/Collapse';
+import Rating from '@material-ui/lab/Rating';
 
 const Reviews = ({review}) => {
   const [open, setOpen] = useState(false);
+
   return (
     <div>
       <Button style={{margin:"10px 0px",fontWeight:"300"}}
@@ -22,6 +24,12 @@ const Reviews = ({review}) => {
           <p style={{marginBottom:'2px',padding:"2px 2px",fontSize:"13px"}}>{item.name}
           <span style={{padding:"2px 5px",fontSize:"10px"}}>{item.date}</span></p>
           </div>
+          <Rating
+          value={item.rating}
+          precision={0.5}
+          name="rating"
+          readOnly="true"
+        />
           <h5 style={{fontWeight:"400"}}>{item.rating} ratings</h5>
           <div>
           <p style={{margin:'2px 0px',padding:"2px 2px",fontSize:"15px",opacity:".8",fontWeight:'200'}}>{item.comments}</p>
