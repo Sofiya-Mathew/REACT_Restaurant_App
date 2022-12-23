@@ -5,7 +5,7 @@ import Col from 'react-bootstrap/Col';
 import { Image} from 'react-bootstrap'
 import RestOperation from './RestOperation';
 import Reviews from './Reviews';
-
+import '../Styels/viewrestaurant.css'
 
 const ViewRestaurant = () => {
     const param=useParams()
@@ -35,22 +35,28 @@ const ViewRestaurant = () => {
     {
         viewrest?
         (
-            <Row>
-                <Col>
-                <Image src={viewrest.photograph} fluid style={{width:'100%',height:'70vh',objectFit:'cover'}}/>
-                </Col>
-                <Col>
-                <h3>Name:{viewrest.name}</h3>
-                <h4>Neighbourhood:{viewrest.neighborhood}</h4>
-                <h4>Address:{viewrest.address}</h4>
-                <h5>Cuisine type:{viewrest.cuisine_type}</h5>
-                 <RestOperation operate={viewrest.operating_hours}/>
-                 <Reviews review={viewrest.reviews}/>
-                </Col>
-            </Row>
-        ):'null'
+        <Row>
+      <Col>
+      <Image src={viewrest.photograph} fluid style={{width:'100%',height:'70vh',objectFit:'cover',margin:"20px 30px"}}/>
+      </Col>
+      <Col style={{width:"100%",margin:"10px 20px"}}>
+      <div className='scroll-bg'>
+        <div className='scroll-div'>
+         <div className='scroll-object'>
+         <h5 style={{fontWeight:"500"}}>{viewrest.name}</h5>
+         <h5 style={{fontWeight:"500"}}>{viewrest.neighborhood}</h5>
+      <h5 style={{fontWeight:"500"}}>{viewrest.address}</h5>
+      <h5 style={{fontWeight:"500"}}>{viewrest.cuisine_type}</h5>
+        <RestOperation operate={viewrest.operating_hours}/>
+        <Reviews review={viewrest.reviews}/>
+         </div>
+        </div>
+      </div>     
+      </Col>
+  </Row>
+    ):'null'
 
-    }
+}
     </>
   )
 }

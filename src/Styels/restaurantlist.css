@@ -1,0 +1,30 @@
+body{
+ overflow-x: hidden;
+}
+.image{
+    width: 100vw;
+    height: 100vh;
+    background: linear-gradient(
+      rgba(255, 255, 255, 0.2),
+      rgba(255, 255, 255, 0.2)
+    ), url('https://i.postimg.cc/TYWxJbvP/grilled-chicken-breast-served-black-slate.jpg');
+    background-repeat: no-repeat;
+   background-size: cover;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.bgImg{
+  position: relative;
+}
+.textContainer{
+  position: absolute;
+  top: 30%;
+  left: 15%;
+}
+.heading{
+  font-size: 70px;
+  letter-spacing: 3px;
+  font-weight: 700;
+  color: white;
+}

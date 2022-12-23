@@ -16,7 +16,7 @@ const RestOperation = ({operate}) => {
 
       <Modal show={show} onHide={handleClose}>
         <Modal.Header closeButton>
-          <Modal.Title>Operating hours</Modal.Title>
+          <Modal.Title style={{fontWeight:"300"}}>Operating hours</Modal.Title>
         </Modal.Header>
         <Modal.Body>
         <ListGroup>

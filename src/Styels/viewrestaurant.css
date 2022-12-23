@@ -1,0 +1,11 @@
+.scroll-div{
+    width: 100%;
+    height: 80vh;
+    overflow: hidden;
+    overflow-y: scroll;
+}
+.scroll-object{
+    font-size: 10px;
+    padding: 20px;
+    width: 100%;
+}

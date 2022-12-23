@@ -5,22 +5,12 @@ import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
 import { RestaurantListAction } from '../Actions/restaurantListAction.js';
 import { useDispatch, useSelector } from 'react-redux';
+import "../Styels/restaurantlist.css"
+import Image from 'react-bootstrap/Image'
 
 const Restaurantlist = () => {
     //to hold value
     const [allrestaurants,setRestaurants]=useState([])
-    // //function to call  API to get all restuarant item from json
-    // const getRestaurant=async()=>{
-    //    await fetch('/restaurants.json')
-    //    .then((data)=>{
-    //   data.json()
-    //   .then((result)=>{
-    //     setRestaurants(result.restaurants) //to covert array of obj to array
-    //   })
-    //    })
-    // }
-    // console.log(allrestaurants);
-
     const dispatch=useDispatch()
     const result=useSelector(state=>state.restaurantReducer)
     console.log(result);
@@ -30,7 +20,19 @@ const Restaurantlist = () => {
         // getRestaurant()
     },[])
   return (
+    <>
+    <div className='imgContainer'>
+      <div className='bgImg'>
+    <Image  className='fluid image' style={{width:"100vw",height:"70vh",objectFit:"cover"}} />
+    </div>
+    <div className='textContainer'>
+      <p className='heading text-pop-up-top '>FIND THE BEST RESTAURANTS!</p>
+    </div>
+    </div>
+    <>
     <Row style={{margin:'20px 20px'}}>
+      <div className='container'>
+      </div>
       {
         restaurantList.map(item=>(
           <Col sm={6} md={6} lg={4} xl={3} style={{margin:'20px 0'}}>
@@ -39,6 +41,8 @@ const Restaurantlist = () => {
         ))
       }
     </Row>
+    </>
+    </>
   )
 }
 
