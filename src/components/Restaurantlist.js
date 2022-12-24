@@ -22,7 +22,7 @@ const Restaurantlist = () => {
     <>
     <div className='imgContainer'>
       <div className='bgImg'>
-    <Image  className='fluid image' style={{width:"100vw",height:"70vh",objectFit:"cover"}} />
+    <Image  className='fluid image' style={{width:"100vw",height:"71vh",objectFit:"cover"}} />
     </div>
     <div className='textContainer'>
       <p className='heading'>FIND THE BEST RESTAURANTS!</p>
